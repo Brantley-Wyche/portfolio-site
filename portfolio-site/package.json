@@ -1,6 +1,6 @@
 {
-  "homepage": "https://brantley-wyche.github.io/Brantley-Wyche.github.io",
-  "name": "Brantley-Wyche.github.io",
+  
+  "name": "portfolio-site",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
