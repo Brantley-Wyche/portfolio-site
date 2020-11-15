@@ -11,7 +11,7 @@ class About extends Component {
 
             <h1>My name is Brantley</h1>
 
-            <h3>Looking to become a web developer after graduation</h3>
+            <h3>Looking to become a web developer after graduation!</h3>
             
             <br></br>
 
