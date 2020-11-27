@@ -1,21 +1,23 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Route,} from "react-router-dom";
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/Navbar';
+import Navigation from './components/Navigation';
 import Home from './contents/Home';
 import About from './contents/About';
 import Education from './contents/Education';
 import Skills from './contents/Skills';
 import Contact from './contents/Contact';
+import Work from './contents/Work';
 
 function App() {
   return (
-    <Router>
+    
       <div className="App">
-        <Navbar />
+        
 
-        {/*Route for Home*/}
+        <Router>
+        <Navigation />
         <Route exact path="/">
           <Home />
         </Route>
@@ -39,8 +41,17 @@ function App() {
         <Route path="/contact">
           <Contact />
         </Route>
+
+        {/*Route for My Work*/}
+        <Route path="/work">
+          <Work />
+        </Route>
+        </Router>
       </div>
-    </Router>
+    
+    
+
+
   );
 }
 

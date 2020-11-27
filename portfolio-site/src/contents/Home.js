@@ -4,8 +4,6 @@ import ReactTypingEffect from 'react-typing-effect';
 
 import profilepic from '../img/my_Face.jpg';
 
-import Social from '../components/Social';
-
 class Home extends Component{
 
     render(){
@@ -15,7 +13,6 @@ class Home extends Component{
 
                 <ReactTypingEffect className="typingeffect" text={['I am Brantley Wyche','Welcome to my site!']} speed={100} eraseDelay={700}/>
 
-                <Social />
             </div>
         )
     }
