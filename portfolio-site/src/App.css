@@ -67,24 +67,6 @@ svg{
   margin-bottom: 30px;
 }
 
-/*nav ul{
-  font-size:var(--fontsize-nav) ;
-  text-align: center;
-  list-style-type: none;
-  text-decoration: none;
-  color: white !important;
-}
-nav ul li
-{
-  margin:40px;
-}
-
-a
-{
-  text-decoration: none;
-  color: white;
-}*/
-
 .subtopic
 {
   margin:10px 10px 30px 10px !important;
@@ -147,3 +129,11 @@ h1,h2,h3,h4,p{
     margin: 10px;
   }
 }*/
+
+.cardspace{
+  margin-top: 10px !important;
+}
+
+.education-img{
+  max-height: 190px !important;
+}
