@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Card from 'react-bootstrap/Card';
+import CardColumns from 'react-bootstrap/CardColumns'
 
 class Skills extends Component{
 
@@ -7,21 +9,27 @@ class Skills extends Component{
         super(props);
 
         this.state={
-            'myskills':['HTML','CSS','JS','PHP','SQL','Java','C#','jQuery','React','Angular','WordPress','Bootstrap']
+            'myskills':['HTML','CSS', 'Bootstrap','PHP','JavaScript','jQuery','React JS','Angular','SQL','Java','C#','WordPress']
         };
     }
 
     render(){
 
         return(
-            <div className="condiv skills">
+            <div className="condiv">
                 <h1 className="subtopic">My Skills</h1>
+                <hr className="blackHR"></hr>
 
-                <ul>
+                <CardColumns>
+                    
                     {this.state.myskills.map((value)=>{
-                        return <li>{value}</li>
+                        return <Card border="dark">
+                                    <Card.Body>
+                                    <Card.Title as="h2" style={{ textAlign: 'center' }}>{value}</Card.Title>
+                                    </Card.Body>
+                                </Card>
                     })}
-                </ul>
+                </CardColumns>
             </div>
         )
     }

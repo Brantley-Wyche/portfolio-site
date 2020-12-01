@@ -6,6 +6,8 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 class Navigation extends Component{
 
+    
+
     render(){
         return(
             
@@ -17,7 +19,6 @@ class Navigation extends Component{
                     <Nav.Link  as={Link} to="/about">About</Nav.Link>
                     <Nav.Link  as={Link} to="/contact">Contact</Nav.Link>
                     <NavDropdown title="My Portfolio" id="collasible-nav-dropdown">
-                        <NavDropdown.Item as={Link} to="/education">Education</NavDropdown.Item>
                         <NavDropdown.Item as={Link} to="/skills">Skills</NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item as={Link} to="/work">My Work</NavDropdown.Item>
