@@ -46,10 +46,16 @@ svg{
   
 }
 .profilepic{
-  border-radius: 50%;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   margin: 30px;
 }
+
+.aboutpic{
+  height: 400px;
+  width: 400px;
+}
+
 .typingeffect{
   font-size: var(--typing-font);
   margin-bottom: 30px;

@@ -18,7 +18,7 @@ class About extends Component {
             <Container>
                 <Row>
                     <Col>
-                    <Image src={require("../img/rit.jpg")}  rounded />
+                    <Image src={require("../img/Brantley-20.jpg")}  className="aboutpic"/>
                     </Col>
                     <Col>
                         <h1>My name is Brantley Wyche</h1>
