@@ -1,17 +1,15 @@
 import React,  { Component } from 'react';
-
 import ReactTypingEffect from 'react-typing-effect';
-
-import profilepic from '../img/my_Face.jpg';
+import Image from 'react-bootstrap/Image';
 
 class Home extends Component{
 
     render(){
         return(
             <div className="condiv home">
-                <img src={profilepic} className="profilepic"></img>
+                <Image src={require("../img/discord-img.png")}  roundedCircle />
 
-                <ReactTypingEffect className="typingeffect" text={['I am Brantley Wyche','Welcome to my site!']} speed={100} eraseDelay={700}/>
+                <ReactTypingEffect className="typingeffect" text={['I am Brantley Wyche','Welcome to my Website!']} speed={100} eraseDelay={700}/>
 
             </div>
         )
