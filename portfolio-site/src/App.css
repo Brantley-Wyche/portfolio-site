@@ -26,10 +26,46 @@ body{
   
 }
 
-@media screen and (max-width: 1023px){
+@media screen and (max-width: 992px){
   .condiv{
-    padding: 50px;
+    padding-top: 50px;
   }
+}
+
+@media screen and (max-width: 767px){
+  .typingeffect{
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .about_para{
+    margin-bottom: 50px;
+  }
+
+  .aboutpic{
+    margin-bottom: 50px;
+  }
+
+  .blackHR{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .linkedin_button{
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .about_header{
+    text-align: center;
+  }
+
+}
+
+.ACC{
+  font-size: 32px !important;
+  text-align: center;
 }
 
 svg{
@@ -51,10 +87,7 @@ svg{
   margin: 30px;
 }
 
-.aboutpic{
-  height: 400px;
-  width: 400px;
-}
+
 
 .typingeffect{
   font-size: var(--typing-font);

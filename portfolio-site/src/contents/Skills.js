@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
-import CardColumns from 'react-bootstrap/CardColumns'
+import CardColumns from 'react-bootstrap/CardColumns';
+
 
 class Skills extends Component{
 
@@ -12,6 +13,7 @@ class Skills extends Component{
             'myskills':['HTML','CSS', 'Bootstrap','PHP','JavaScript','jQuery','React JS','Angular','SQL','Java','C#','WordPress']
         };
     }
+
 
     render(){
 
@@ -30,6 +32,7 @@ class Skills extends Component{
                                 </Card>
                     })}
                 </CardColumns>
+
             </div>
         )
     }

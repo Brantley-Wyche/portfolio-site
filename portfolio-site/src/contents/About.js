@@ -17,11 +17,11 @@ class About extends Component {
 
             <Container>
                 <Row>
-                    <Col>
-                    <Image src={require("../img/Brantley-20.jpg")}  className="aboutpic"/>
+                    <Col xs={{span: 12, order: 2}} lg={{span: 6, order: 1}} className="aboutpic">
+                    <Image src={require("../img/Brantley-20.jpg")} fluid/>
                     </Col>
-                    <Col>
-                        <h1>My name is Brantley Wyche</h1>
+                    <Col xs={{span: 12, order: 1}} lg={{span: 6, order: 2}} className="about_para">
+                        <h1 className="about_header">My name is Brantley Wyche</h1>
 
                         <br />
 
@@ -29,9 +29,10 @@ class About extends Component {
 
                         <br />
 
-                        <Button href="https://www.linkedin.com/in/brantley-wyche-8744a5172/" variant="outline-dark">Feel free to connect with me on LinkedIn!</Button>
+                        <Button href="https://www.linkedin.com/in/brantley-wyche-8744a5172/" variant="dark" className="linkedin_button">Connect with me on LinkedIn!</Button>
                         
                     </Col>
+                    
                 </Row>
             </Container>
 
