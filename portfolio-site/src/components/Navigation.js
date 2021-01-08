@@ -5,9 +5,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 class Navigation extends Component{
-
-    
-
     render(){
         return(
             
@@ -26,6 +23,8 @@ class Navigation extends Component{
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
+
+            
         )
     }
 }
