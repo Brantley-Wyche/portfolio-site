@@ -1,33 +1,27 @@
 import React, { Component } from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import Button from '@material-ui/core/Button';
 
+/**
+ * 
+ * 
+ * NOT IN USE FOR NOW, WILL UPDATE LATER IF I DECIDE TO IMPLEMENT
+ * 
+ * 
+ */
 
 class Contact extends Component{
     render(){
 
         return(
-            <div className="condiv">
-                <h1 className="subtopic">Contact Me</h1>
-                <hr className="blackHR"></hr>
-
-                <p style={{ textAlign: 'center' }}>Please fill out the form below if you want to get in touch with me and I will get back to you as soon as I can!</p>
-
-                <Form>
-                    <Form.Group>
-                        <Form.Control type="text" placeholder="Your Name" />  
-                    </Form.Group>
-                    <Form.Group>
-                        <Form.Control type="email" placeholder="Your Email Address" />
-                    </Form.Group>                  
-                    <Form.Group>
-                        <Form.Control as="textarea" rows={3} placeholder="Your Message"/>
-                    </Form.Group>
-                    <Button variant="primary" type="submit" block>
-                        Send Message
-                    </Button>
-                </Form>
-            </div>
+            <main className="main_content">
+                <div>
+                    
+                        <Button color="primary" variant="contained" fullWidth type="submit">
+                        Submit
+                        </Button>
+                    
+                </div>
+            </main>
         )
     }
 }

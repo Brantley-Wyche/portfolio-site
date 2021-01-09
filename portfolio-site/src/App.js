@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Material UI imports for the Navbar
 import AppBar from '@material-ui/core/AppBar';
@@ -17,7 +16,6 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
-import AlternateEmailRoundedIcon from '@material-ui/icons/AlternateEmailRounded';
 import CodeIcon from '@material-ui/icons/Code';
 import WorkRoundedIcon from '@material-ui/icons/WorkRounded';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -28,7 +26,6 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Home from './contents/Home';
 import About from './contents/About';
 import Skills from './contents/Skills';
-import Contact from './contents/Contact';
 import Work from './contents/Work';
 
 
@@ -39,6 +36,10 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    
+  },
+  leftTitle: {
+    marginLeft: 'auto',
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
@@ -82,44 +83,44 @@ function App(props) {
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
+  const [selectedIndex, setSelectedIndex] = React.useState(1);
+
+  const handleListItemClick = (event, index) => {
+    setSelectedIndex(index);
+  };
+
   //List of Navigation Items
   const drawer = (
     <div>
       <div className={classes.toolbar}/>
       
       <List>
-          <ListItem button component={Link} to="/">
+          <ListItem button component={Link} to="/" selected={selectedIndex === 1} onClick={(event) => handleListItemClick(event,1)}>
               <ListItemIcon>
-                  <HomeRoundedIcon className="white_icons"/>
+                  <HomeRoundedIcon className="gray_icons"/>
               </ListItemIcon>
               <ListItemText primary="Home" />
           </ListItem>
-          <ListItem button component={Link} to="/about">
+          <ListItem button component={Link} to="/about" selected={selectedIndex === 0} onClick={(event) => handleListItemClick(event,0)}>
               <ListItemIcon>
-                  <AccountCircleRoundedIcon className="white_icons"/>
+                  <AccountCircleRoundedIcon className="gray_icons"/>
               </ListItemIcon>
               <ListItemText primary="About" />
           </ListItem>
-          <ListItem button component={Link} to="/contact">
+          <ListItem button component={Link} to="/skills" selected={selectedIndex === 2} onClick={(event) => handleListItemClick(event,2)}>
               <ListItemIcon>
-                  <AlternateEmailRoundedIcon className="white_icons"/>
-              </ListItemIcon>
-              <ListItemText primary="Contact" />
-          </ListItem>
-          <ListItem button component={Link} to="/skills">
-              <ListItemIcon>
-                  <CodeIcon className="white_icons"/>
+                  <CodeIcon className="gray_icons"/>
               </ListItemIcon>
               <ListItemText primary="Skills" />
           </ListItem>
-          <ListItem button component={Link} to="/work">
+          <ListItem button component={Link} to="/work" selected={selectedIndex === 3} onClick={(event) => handleListItemClick(event,3)}>
               <ListItemIcon>
-                  <WorkRoundedIcon className="white_icons"/>
+                  <WorkRoundedIcon className="gray_icons"/>
               </ListItemIcon>
-              <ListItemText primary="Work" />
+              <ListItemText primary="Portfolio" />
           </ListItem>
       </List>
-      <Divider className="black_divider"/>
+      <Divider className="gray_divider"/>
   
     </div>
   );
@@ -143,7 +144,7 @@ function App(props) {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" noWrap>
+            <Typography variant="h6" noWrap className={classes.leftTitle}>
               Brantley Wyche
             </Typography>
           </Toolbar>
@@ -200,11 +201,6 @@ function App(props) {
           {/*Route for Skills*/}
           <Route path="/skills">
             <Skills />
-          </Route>
-
-          {/*Route for Contact*/}
-          <Route path="/contact">
-            <Contact />
           </Route>
 
           {/*Route for My Work*/}

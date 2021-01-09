@@ -17,7 +17,12 @@ body{
 }
 
 #BAR{
-  background-color: #343a40;
+  background-color: #333;
+}
+
+.condiv{
+  flex:var(--condiv-flex);
+  min-height: 100vh;
 }
 
 svg{
@@ -27,12 +32,22 @@ svg{
 }
 
 .MuiDrawer-paperAnchorDockedLeft, .MuiDrawer-paperAnchorLeft{
-  background-color: #343a40 !important;
+  background-color: #212121 !important;
+  color: white !important;
+  border-right: 1px solid #333 !important;
+}
+
+.Mui-selected{
+  background-color: white !important;
+  color: black !important;
+}
+
+.MuiAccordionSummary-expandIcon{
   color: white !important;
 }
 
-.white_icons{
-  color: white !important;
+.gray_icons{
+  color: gray !important;
 }
 
 .home{
@@ -48,11 +63,6 @@ svg{
   margin: 30px;
 }
 
-.aboutpic{
-  height: 400px;
-  width: 400px;
-}
-
 .typingeffect{
   font-size: var(--typing-font);
   margin-bottom: 30px;
@@ -61,7 +71,7 @@ svg{
 .subtopic{
   margin:10px 10px 20px 10px !important;
   font-weight: 300;
-  text-align: center;
+  text-align: left;
 }
 p{
   font-size: var(--fontsize-p);
@@ -70,27 +80,45 @@ h1,h2,h3,h4,p{
   margin: 10px;
 }
 
-.blackHR{
-  background-color: black;
+.whiteHR{
+  background-color: white;
   margin-bottom: 50px;
 }
 
-.black_divider{
-  background-color: black !important;
+.main_content{
+  flex-grow: 1;
+  padding: 96px 30px 30px 30px;
+  background-color: #212121 !important;
+  color: white !important;
+}
+
+.gray_divider{
+  background-color: #333 !important;
 }
 
 @media screen and (min-width: 1024px){
-  .condiv{
-    padding: 50px 100px 100px 100px;
-
-    flex:var(--condiv-flex);
-    min-height: 100vh;
+  
+  .aboutpic{
+    max-height: 600px;
+    max-width: 600px;
   }
   
 }
 
 @media screen and (max-width: 1023px){
-  .condiv{
+  .aboutpic{
+    max-height: 425px;
+    max-width: 365px;
+  }
+
+  .home{
     padding: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  .aboutpic{
+    min-width: 468px;
+    max-width: 720px;
   }
 }

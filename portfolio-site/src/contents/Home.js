@@ -9,10 +9,9 @@ class Home extends Component{
         return(
 
             //Main content of Home Page
-            <main style={{ flexGrow: 1, padding: 24 }}>
+            <main className="main_content">
                 <div className="condiv home">
-                    
-                    <img src={require("../img/discord-img.png")}/>
+                                       
                     <ReactTypingEffect className="typingeffect" text={['I am Brantley Wyche','Welcome to my Website!']} speed={100} eraseDelay={700}/>
                     
                 </div>

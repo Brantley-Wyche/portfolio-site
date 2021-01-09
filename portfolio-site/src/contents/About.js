@@ -1,43 +1,75 @@
 import React, { Component } from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
-import Button from 'react-bootstrap/Button';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+//import { makeStyles } from '@material-ui/core/styles';
+//import Paper from '@material-ui/core/Paper';
+
+
+/**
+ * 
+ * UNCOMMENT THIS CODE ONCE I FIGURE OUT WHAT TO DO WITH THE IMAGE
+ * 
+ */
+
+/*
+function AboutImage(){
+    const useStyles = makeStyles((theme) => ({
+        image: {
+          display: 'flex',
+          justifyContent: 'center',
+          backgroundColor: '#212121',
+        }
+    }));
+
+    const classes = useStyles();
+
+    return(
+        <Paper elevation={0} className={classes.image}>
+            <img src={require("../img/Brantley-20.jpg")} className="aboutpic"/>
+        </Paper>
+    );
+}*/
 
 class About extends Component {
 
     render() {
 
         return (
-        <div className="condiv">
-
-            <h1 className="subtopic">About Me</h1>
-            <hr className="blackHR"></hr>
-
-            <Container>
-                <Row>
-                    <Col>
-                    <Image src={require("../img/Brantley-20.jpg")}  className="aboutpic"/>
-                    </Col>
-                    <Col>
-                        <h1>My name is Brantley Wyche</h1>
-
-                        <br />
-
-                        <p>I'm a student at the Rochester Institute of Technology who has been studying web development for almost five years. I'm always willing to learn new things and experience new situations.  I enjoy baking, video games, anime, and hanging out with friends. I'm looking to become a full-time web developer after graduation.  Thanks for checking out my website!</p>
-
-                        <br />
-
-                        <Button href="https://www.linkedin.com/in/brantley-wyche-8744a5172/" variant="outline-dark">Feel free to connect with me on LinkedIn!</Button>
-                        
-                    </Col>
-                </Row>
-            </Container>
-
             
+            //Grid for the content. I will add the image back once I figure out how to display it correctly
+            <main className="main_content">
+                <div className="condiv">
 
-        </div>
+                    <Typography variant="h3" gutterBottom>
+                        About Me
+                    </Typography>
+                    <hr className="whiteHR"/>
+
+                    <Grid container spacing={3}>
+                        <Grid item xs={12}>
+                            
+                            <Typography variant="h4" gutterBottom>
+                                Hello, My name's Brantley Wyche!
+                            </Typography>
+
+                            <br />
+
+                            <Typography variant="body1" gutterBottom>
+                                I'm currently a student at the Rochester Institute of Technology and I'm looking to become a full-time web developer after I graduate.  My hobbies include: baking, playing video games, watching anime, and hanging out with friends. Thanks for checking out my website!
+                            </Typography>
+
+                            <br />
+
+                            <Button variant="contained" color="primary" href="https://www.linkedin.com/in/brantley-wyche-8744a5172/">Connect with me on LinkedIn</Button>
+                        </Grid>
+                        {/*<Grid item xs={12} xl={6}>
+                            <AboutImage />
+                        </Grid>*/}
+                    </Grid>
+
+                </div>
+            </main>
         )
     }
 }
