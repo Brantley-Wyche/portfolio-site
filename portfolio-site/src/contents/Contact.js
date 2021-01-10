@@ -10,6 +10,7 @@ import Button from '@material-ui/core/Button';
  */
 
 class Contact extends Component{
+
     render(){
 
         return(

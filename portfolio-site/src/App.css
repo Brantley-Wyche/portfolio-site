@@ -25,6 +25,42 @@ body{
   min-height: 100vh;
 }
 
+@media screen and (max-width: 767px){
+  .typingeffect{
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .about_para{
+    margin-bottom: 50px;
+  }
+
+  .aboutpic{
+    margin-bottom: 50px;
+  }
+
+  .blackHR{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .linkedin_button{
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .about_header{
+    text-align: center;
+  }
+
+}
+
+.ACC{
+  font-size: 32px !important;
+  text-align: center;
+}
+
 svg{
   width: 30px;
   height: 30px;
