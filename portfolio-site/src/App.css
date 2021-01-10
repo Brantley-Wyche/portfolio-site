@@ -25,42 +25,6 @@ body{
   min-height: 100vh;
 }
 
-@media screen and (max-width: 767px){
-  .typingeffect{
-    text-align: center !important;
-  }
-}
-
-@media screen and (max-width: 992px){
-  .about_para{
-    margin-bottom: 50px;
-  }
-
-  .aboutpic{
-    margin-bottom: 50px;
-  }
-
-  .blackHR{
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-
-  .linkedin_button{
-    display: block !important;
-    width: 100% !important;
-  }
-
-  .about_header{
-    text-align: center;
-  }
-
-}
-
-.ACC{
-  font-size: 32px !important;
-  text-align: center;
-}
-
 svg{
   width: 30px;
   height: 30px;
@@ -84,19 +48,6 @@ svg{
 
 .gray_icons{
   color: gray !important;
-}
-
-.home{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  
-}
-.profilepic{
-  height: 300px;
-  width: 300px;
-  margin: 30px;
 }
 
 .typingeffect{
@@ -138,6 +89,14 @@ h1,h2,h3,h4,p{
     max-height: 600px;
     max-width: 600px;
   }
+
+  .home{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+  }
   
 }
 
@@ -156,5 +115,22 @@ h1,h2,h3,h4,p{
   .aboutpic{
     min-width: 468px;
     max-width: 720px;
+  }
+
+  .home{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+}
+
+@media screen and (max-width: 767px){
+  .home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
   }
 }
